@@ -1,0 +1,418 @@
+/*
+	Theme Name: Coco-Mats
+	Text Domain: Coco-Mats
+	Version: 1.0
+	Requires at least: 4.7
+	Requires PHP: 5.2.4
+	Description: Our Coco-Mats theme is designed to show off the power of the Woocommerce. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you’ll see on your website. Coco-mats is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it’s built to be beautiful on all screen sizes.
+	Author: DevRoaks
+	Author URI: https://devroaks.com
+	Tags:  one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+	Theme URI: #
+	License: GNU General Public License v2 or later
+	License URI: #
+	*/
+
+	/* -------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+.imageContainerProduct {height: 280px;max-height: 280px;overflow: hidden;}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.imageContainerProduct img {
+    height: 100%;
+}
+
+.nameProduct h3 {
+    font-size: 15px;
+    position: relative;
+    padding: 10px 0 6px;
+    line-height: 1.7;
+    color: #1c1d1d;
+    font-weight: 400;
+}
+
+.productContainerMain {
+    margin-bottom: 40px;
+}
+
+.slaeTag {
+    background-color: #f25c5a;
+    color: #000;
+    max-width: max-content;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.productContainerMain {
+    position: relative;
+}
+
+h5 {
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contentSection2Container h2 {
+    text-align: left;
+}
+p {
+    letter-spacing: .025em;
+    line-height: 1.5;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeSpeed;
+}
+
+.contentSection2Container {
+    max-width: 450px;
+}
+
+.classicButton {
+    font-weight: 600;
+    letter-spacing: .025em;
+    line-height: 1.3;
+    display: inline-block;
+    padding: 9px 20px;
+    margin: 0;
+    width: auto;
+    min-width: 90px;
+    line-height: 1.42;
+    font-size: 1.14286em;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    color: #fff;
+    background: black;
+    transition: 0.6s all;
+    font-size: 14px;
+    border: 2px solid #000;
+}
+
+a:hover {text-decoration: none;}
+
+.classicButton:hover {
+    background: none;
+    color: #000;
+}
+
+.personalizeSection {
+    margin: 100px 0px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.popularSection h5 {
+    text-align: center;
+}
+
+ul#myTab {
+    margin: auto;
+    max-width: max-content;
+    border: none;
+}
+
+ul#myTab li a {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 20px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #000;
+    margin-bottom: 0;
+}
+
+ul#myTab li a.active {
+    border-color: #000;
+}
+
+div#myTabContent {
+    padding: 50px 0px;
+}
+
+.popularSection {margin-bottom: 100px;}
+
+.customCocoMats {
+    min-height: 650px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background: red;
+    text-align: left;
+    padding: 6% 0px 0px;
+}
+
+.customCocoMats h2 {
+    text-align: left;
+    font-size: 28px;
+}
+
+.boxContainercustomCoco {
+    background: #fff;
+    text-align: left;
+    background: white;
+    padding: 40px;
+    width: 380px;
+}
+
+.boxContainercustomCoco p {
+    line-height: 28px;
+    font-size: 15px;
+}
+
+.boxContainercustomCoco a {
+    margin: 20px 0px 0px;
+}
+
+.productContainerAfterCustomCocoMats {
+    margin: 100px 0px;
+}
+
+.cateGoeryBox {
+    position: relative;
+}
+
+.cateGoeryBox h2 {
+    position: absolute;
+}
+
+.cateGoeryBox {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+    background: #f7f7f7;
+}
+
+div#biggerBox {
+    min-height: 600px;
+}
+
+div#largeBox {
+    max-height: 290px;
+    min-height: 290px;
+    margin-bottom: 15px;
+    flex: 0 100%;
+}
+
+div#smallBox {
+    width: 49%;
+    min-height: 290px;
+    max-height: 290px;
+    /* float: left; */
+}
+
+.gridBoxes .col-md-6 .col-md-12 {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gridBoxes .col-md-6 {
+    margin-bottom: 15px;
+}
+.dflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cateGoeryBox:hover::after {
+    display: block;
+    opacity: 1;
+}
+
+.cateGoeryBox::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #0000007d;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.7s all;
+}
+
+.cateGoeryBox h2 {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 12.5px 12.5px;
+    pointer-events: none;
+    color: #fff;
+    transition: bottom .5s ease;
+    font-size: 20px;
+    margin: 0 25px 25px;
+}
+
+.cateGoeryBox h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: width 0.6s;
+    width: 0;
+}
+
+.cateGoeryBox:hover h2::after {
+    width: 100%;
+}
+.col-md-6.dflex {
+    padding: 0px;
+}
+
+.gridBoxes .container > .row > .col-md-6:first-child {
+    padding: 0px;
+}
+.gridBoxes {
+    margin-bottom: 100px;
+}
+
+.shopTop h2 {
+    margin-bottom: 60px;
+}
+
+.col-md-12 .classicButton {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+}
+.homeFooterbanner {
+    min-height: 600px;
+    max-height: 600px;
+    overflow: hidden;
+    margin: 100px 0px;
+}
+
+.homeFooterbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footerContent {
+    margin-bottom: 100px;
+}
+
+.newsLetter {
+    background-color: #f4f4f4;
+    color: #1c1d1d;
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.newsLetter input {
+    width: 100%;
+    height: 43px;
+    font-size: 14px;
+    padding: 0px 10px;
+    min-width: 250px;
+}
+
+.newsLetterForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: max-content;
+    margin: 20px auto;
+}
+
+button.classicButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+}
+h4 {
+    font-weight: 600;
+    letter-spacing: .025em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #1c1d1d;
+    font-size: .92857em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f9f9f9;
+    color: #1c1d1d;
+    padding: 100px 0px;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+footer a {
+    color: #1c1d1d;
+    padding: 4px 0;
+    font-size: 14px;
+    display: block;
+    color: #1c1d1d;
+    /* margin-bottom: 3px; */
+}
+
+footer li {
+    margin-bottom: 3px;
+    padding: 4px 0;
+    font-size: 14px;
+    display: block;
+    color: #1c1d1d;
+}
+
+.socialIcons ul {
+    display: flex;
+}
+
+.socialIcons ul li:nth-child(even) {
+    margin: 0px 16px;
+}
