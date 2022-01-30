@@ -1,25 +1,25 @@
 /*
-	Theme Name: Coco-Mats
-	Text Domain: Coco-Mats
-	Version: 1.0
-	Requires at least: 4.7
-	Requires PHP: 5.2.4
-	Description: Our Coco-Mats theme is designed to show off the power of the Woocommerce. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you’ll see on your website. Coco-mats is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it’s built to be beautiful on all screen sizes.
-	Author: DevRoaks
-	Author URI: https://devroaks.com
-	Tags:  one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
-	Theme URI: #
-	License: GNU General Public License v2 or later
-	License URI: #
-	*/
+    Theme Name: Coco-Mats
+    Text Domain: Coco-Mats
+    Version: 1.0
+    Requires at least: 4.7
+    Requires PHP: 5.2.4
+    Description: Our Coco-Mats theme is designed to show off the power of the Woocommerce. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you’ll see on your website. Coco-mats is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it’s built to be beautiful on all screen sizes.
+    Author: DevRoaks
+    Author URI: https://devroaks.com
+    Tags:  one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+    Theme URI: #
+    License: GNU General Public License v2 or later
+    License URI: #
+    */
 
-	/* -------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 
 body {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
 h2 {
@@ -416,3 +416,8 @@ footer li {
 .socialIcons ul li:nth-child(even) {
     margin: 0px 16px;
 }
+.imageContainerProduct img {
+    padding: 20px 0px;
+    object-fit: contain;
+}
+.productContainerMain a {color: #000;}

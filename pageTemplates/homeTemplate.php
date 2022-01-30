@@ -5,142 +5,33 @@
 	<div class="container">
 		<h2>CLEARANCE FEATURES 60% OFF!</h2>
 		<div class="row">
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+			<?php 
+			$args = array(  
+				'post_type' => 'product',
+				'post_status' => 'publish',
+				'posts_per_page' => 8,
+			);
+			$loop = new WP_Query( $args ); 
+			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+				<div class="col-md-3">
+					<div class="productContainerMain">
+						<a href="<?php the_permalink(); ?>">
+							<div class="imageContainerProduct">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+							</div>
+							<div class="nameProduct">
+								<div class="slaeTag">
+									Save $85.00
+								</div>
+								<h3><?php the_title(); ?></h3>
+								<div class="priceContainerProduct">
+									<?php echo $product->get_price_html(); ?>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
 				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
+			<?php endwhile; wp_reset_postdata();  ?>
 			<div class="col-md-12">
 				<a href="#" class="classicButton">View All</a>
 			</div>
@@ -405,73 +296,35 @@
 <div class="productContainerAfterCustomCocoMats">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+			<?php 
+			$args = array(  
+				'post_type' => 'product',
+				'post_status' => 'publish',
+				'posts_per_page' => 4,
+			);
+			$loop = new WP_Query( $args ); 
+			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+				<div class="col-md-3">
+					<div class="productContainerMain">
+						<a href="<?php the_permalink(); ?>">
+							<div class="imageContainerProduct">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+							</div>
+							<div class="nameProduct">
+								<div class="slaeTag">
+									Save $85.00
+								</div>
+								<h3><?php the_title(); ?></h3>
+								<div class="priceContainerProduct">
+									<?php echo $product->get_price_html(); ?>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
 				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
+			<?php endwhile; wp_reset_postdata();  ?>
+			<div class="col-md-12">
+				<a href="#" class="classicButton">View All</a>
 			</div>
 		</div>
 	</div>
@@ -483,213 +336,252 @@
 <div class="gridBoxes">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<div class="cateGoeryBox" id="biggerBox">
-					<div class="categoryName">
-						<h2>Designer Doormats</h2>
+			
+			<?php $termchildren = get_terms( 
+				array(
+					'taxonomy' => 'product_cat',
+					'number'  =>  18,
+					'hide_empty'  => true, 
+					'orderby'  => 'include', 
+					'parent' => 0
+				));?>
+				<?php foreach($termchildren as $category) {  $term_link = get_term_link( $category ); ?>
+					<?php $yes = get_field('is_big', 'product_cat_'.$category->term_id); print_r($yes); ?>
+					<?php if ($yes == 'Yes') { ?>
+						<div class="col-md-6">
+							<a href="<?php echo $term_link; ?>">
+								<div class="cateGoeryBox" id="biggerBox" style="background-image: : url('<?php the_field('category_banner_image', 'product_cat_'.$category->term_id); ?>');">
+									<div class="categoryName">
+										<h2><?php echo $category->name; ?></h2>
+									</div>
+								</div>
+							</a>
+						</div>
+					<?php } } ?>
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<?php $termchildren = get_terms( 
+								array(
+									'taxonomy' => 'product_cat',
+									'number'  =>  18,
+									'hide_empty'  => true, 
+									'orderby'  => 'include', 
+									'parent' => 0
+								));?>
+								<?php foreach($termchildren as $category) {  $term_link = get_term_link( $category ); ?>
+									<?php $yes = get_field('is_large', 'product_cat_'.$category->term_id); print_r($yes); ?>
+									<?php if ($yes == 'Yes') { ?>
+										<a href="<?php echo $term_link; ?>">
+											<div class="cateGoeryBox" id="largeBox" style="background-image: : url('<?php the_field('category_banner_image', 'product_cat_'.$category->term_id); ?>');">
+												<div class="categoryName">
+													<h2><?php echo $category->name; ?></h2>
+												</div>
+											</div>
+										</a>
+									<?php }
+									else if ($yes == 'No') { ?>
+										<a href="<?php echo $term_link; ?>">
+											<div class="cateGoeryBox" id="smallBox" style="background-image: : url('<?php the_field('category_banner_image', 'product_cat_'.$category->term_id); ?>');">
+												<div class="categoryName">
+													<h2><?php echo $category->name; ?></h2>
+												</div>
+											</div>
+										</a>
+									<?php } } ?>
+
+									<!-- <div class="cateGoeryBox" id="smallBox">
+										<div class="categoryName">
+											<h2>Designer Doormats</h2>
+										</div>
+									</div>
+									<div class="cateGoeryBox" id="smallBox">
+										<div class="categoryName">
+											<h2>Designer Doormats</h2>
+										</div>
+									</div> -->
+								</div>
+							</div>
+							<div class="col-md-6 dflex">
+								<div class="cateGoeryBox" id="smallBox">
+									<div class="categoryName">
+										<h2>Designer Doormats</h2>
+									</div>
+								</div>
+								<div class="cateGoeryBox" id="smallBox">
+									<div class="categoryName">
+										<h2>Designer Doormats</h2>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+
+								<div class="cateGoeryBox" id="largeBox">
+									<div class="categoryName">
+										<h2>Designer Doormats</h2>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="col-md-12">
-					<div class="cateGoeryBox" id="largeBox">
-						<div class="categoryName">
-							<h2>Designer Doormats</h2>
-						</div>
-					</div>
-					<div class="cateGoeryBox" id="smallBox">
-						<div class="categoryName">
-							<h2>Designer Doormats</h2>
-						</div>
-					</div>
-					<div class="cateGoeryBox" id="smallBox">
-						<div class="categoryName">
-							<h2>Designer Doormats</h2>
+
+
+
+				<div class="shopTop">
+					<div class="container">
+						<h2>SHOP OUR TOP DESIGNS</h2>
+
+						<div class="row">
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="productContainerMain">
+									<div class="imageContainerProduct">
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>">
+									</div>
+									<div class="nameProduct">
+										<div class="slaeTag">
+											Save $85.00
+										</div>
+										<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
+										<div class="priceContainerProduct">
+											<?php //echo $product->get_price(); ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-12">
+								<a href="#" class="classicButton">View All</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-6 dflex">
-				<div class="cateGoeryBox" id="smallBox">
-					<div class="categoryName">
-						<h2>Designer Doormats</h2>
-					</div>
+
+
+
+				<div class="homeFooterbanner">
+					<img src="./images/aslijd.png">
 				</div>
-				<div class="cateGoeryBox" id="smallBox">
-					<div class="categoryName">
-						<h2>Designer Doormats</h2>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				
-				<div class="cateGoeryBox" id="largeBox">
-					<div class="categoryName">
-						<h2>Designer Doormats</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="shopTop">
-	<div class="container">
-		<h2>SHOP OUR TOP DESIGNS</h2>
-
-		<div class="row">
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="productContainerMain">
-					<div class="imageContainerProduct">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="nameProduct">
-						<div class="slaeTag">
-							Save $85.00
-						</div>
-						<h3>Handwoven Coco Doormats - 1.5" Thick 48x72</h3>
-						<div class="priceContainerProduct">
-							<?php //echo $product->get_price(); ?>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-12">
-				<a href="#" class="classicButton">View All</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="homeFooterbanner">
-	<img src="./images/aslijd.png">
-</div>
 
 
 
 
-<?php get_footer(); ?>
+				<?php get_footer(); ?>
